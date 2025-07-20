@@ -1,11 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
-@import "tailwindcss";
-@plugin "daisyui";
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-*{
-  font-family: "Outfit", sans-serif;
+@import "tailwindcss";
+
+
+
+@theme {
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Poppins", sans-serif;
+  --font-roboto-slab: "Roboto Slab";
+  --font-roboto-mono: "Roboto Mono";
+  --color-primary: #412788;
+
 }
 
-@theme{
-  --color-primary: 	#0437F2;
+@keyframes slide-in {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.4s ease forwards;
+}
+
+.animate-slide-out {
+  animation: slide-out 0.4s ease forwards;
+}
+
+
+
+
+
+
+
+
+@keyframes float-tech {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+@layer utilities {
+  .animate-float-tech {
+    animation-name: float-tech;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
 }

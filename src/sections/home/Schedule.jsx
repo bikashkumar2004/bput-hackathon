@@ -1,5 +1,6 @@
 import React from 'react';
 import { Clock, Calendar } from 'lucide-react';
+import Heading from '../../components/typography/Heading';
 
 const scheduleData = [
   {
@@ -30,33 +31,31 @@ const scheduleData = [
 
 const Schedule = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py- bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Hackathon <span className="text-primary">Schedule</span>
-          </h2>
+          <Heading text={'Hackathon Schedule'} />
           <p className="text-xl text-gray-600 mb-8">
-            24-hour timeline packed with innovation and collaboration
+            48-hour timeline packed with innovation and collaboration
           </p>
-          
+
           <div className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-xl border border-gray-200">
             <Calendar className="text-primary" size={20} />
             <span className="font-semibold text-gray-800">Sunday, 30 November 2025</span>
           </div>
         </div>
-        
+
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary"></div>
-            
+
             <div className="space-y-6">
               {scheduleData.map((item, index) => (
                 <div key={index} className="relative flex items-start gap-6">
                   <div className="flex-shrink-0 w-16 h-16 bg-primary rounded-full flex items-center justify-center">
                     <Clock className="text-white" size={24} />
                   </div>
-                  
+
                   <div className="flex-1 bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
                     <div className="flex items-center gap-4 mb-2">
                       <span className="text-primary font-semibold">{item.time}</span>

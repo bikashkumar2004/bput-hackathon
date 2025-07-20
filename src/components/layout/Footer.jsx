@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="text-2xl font-bold mb-4">
-            HackFest<span className="text-primary">2025</span>
+              BPUT Hackathon <span className="text-primary">2025</span>
             </div>
             <p className="text-gray-400 mb-4">
               Empowering innovation through collaborative problem-solving and cutting-edge technology.
@@ -25,7 +25,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -35,13 +35,13 @@ const Footer = () => {
               <li><a href="#prizes" className="text-gray-400 hover:text-primary transition-colors">Prizes</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-primary" />
-                <span className="text-gray-400">info@HackFest.com</span>
+                <span className="text-gray-400">hackathon@bput.ac.in</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="text-primary" />
@@ -53,7 +53,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
             <p className="text-gray-400 mb-4">Stay updated with the latest hackathon news</p>
@@ -69,10 +69,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © Architected with ❤️ by HackFest Team
+            © BPUT Hackathon 2025. All rights reserved.
           </p>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Gift, Briefcase, Users } from "lucide-react";
+import Heading from "../../components/typography/Heading";
 
 const benefits = [
   {
@@ -24,12 +25,10 @@ const Prizes = () => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Heading text={"Prizes & More"} />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Prize & More */}
           <div>
-            <h2 className="text-6xl font-bold text-gray-900 pl-3">
-              <span className="text-primary">Prize</span> & More
-            </h2>
             <section className="flex flex-col items-center justify-center px-4 py-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full">
                 {/* Top two cards */}
@@ -71,7 +70,7 @@ const Prizes = () => {
             {/* First Prize */}
             <div className="">
               <div className="text-6xl md:text-[90px] font-bold bg-gradient-to-r from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-2">
-                Rs. 50,000
+                ₹ 50,000
               </div>
               <div className="text-lg font-semibold text-gray-600 uppercase tracking-wider">
                 FIRST PRIZE
@@ -81,7 +80,7 @@ const Prizes = () => {
             {/* Second Prize */}
             <div className="">
               <div className="text-6xl md:text-[90px] font-bold bg-gradient-to-r from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-2">
-                Rs. 30,000
+                ₹ 30,000
               </div>
               <div className="text-lg font-semibold text-gray-600 uppercase tracking-wider">
                 SECOND PRIZE
@@ -91,7 +90,7 @@ const Prizes = () => {
             {/* Third Prize */}
             <div className="">
               <div className="text-6xl md:text-[90px] font-bold bg-gradient-to-r from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-2">
-                Rs. 20,000
+                ₹ 20,000
               </div>
               <div className="text-lg font-semibold text-gray-600 uppercase tracking-wider">
                 THIRD PRIZE

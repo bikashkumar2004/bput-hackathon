@@ -64,7 +64,7 @@ const ProblemSectors = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {sectors.map((sector, index) => (
-            <div key={index} className="bg-white border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow group rounded-tr-4xl rounded-bl-4xl">
+            <div key={index} className="bg-white border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow group  ">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={sector.image}
@@ -88,7 +88,7 @@ const ProblemSectors = () => {
               </div>
             </div>
           ))}
-          <div className="bg-white border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow flex flex-col items-center justify-between p-4 rounded-tr-4xl rounded-bl-4xl">
+          <div className="bg-blue-50  border border-blue-200 overflow-hidden hover:shadow-xl transition-shadow flex flex-col items-center justify-between p-4 rounded-tr-4xl rounded-bl-4xl">
             <div className="flex flex-col items-center justify-evenly h-full mb-4 ">
               <div className="bg-primary p-3 rounded-full">
                 <Lightbulb className="text-white" size={24} />

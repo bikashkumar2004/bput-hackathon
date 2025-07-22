@@ -16,7 +16,7 @@ const Partners = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Heading text={'OUR PARTNERS'} />
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 mt-10 place-items-center">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 gap-8 mt-10 place-items-center">
           {sponsors.map((sponsor, index) => (
             <div key={index} className="flex flex-col items-center">
               <img

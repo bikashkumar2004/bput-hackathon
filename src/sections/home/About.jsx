@@ -80,7 +80,7 @@ const About = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        <Heading text="About HackFest 2025" />
+        <Heading text="About BPUT Hackathon 2025" />
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
           <div className="relative group col-span-3">
             {/* Glowing border effect */}

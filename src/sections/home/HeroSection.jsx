@@ -5,8 +5,10 @@ import { Users, Trophy, Code, Terminal, Cpu, GitBranch, Database, Zap } from "lu
 import { Typewriter } from "react-simple-typewriter";
 import BputLogo from '../../assets/logo/bput-logo.png'
 import FlipNumberAnimation from "../../components/countdown/FlipNumberAnimation";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const hackathonDate = new Date("2025-08-30T09:00:00");
 
@@ -135,7 +137,7 @@ const HeroSection = () => {
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 blur opacity-70 group-hover:opacity-100 transition-opacity duration-300 z-[-1]" />
           </button>
 
-          <button className="bg-white/10 backdrop-blur-lg border border-white/20 py-3 px-6 rounded-full text-white hover:bg-white/20 hover:scale-105 transition-all font-semibold flex items-center">
+          <button onClick={() => navigate("/problem-statements")} className="bg-white/10 cursor-pointer backdrop-blur-lg border border-white/20 py-3 px-6 rounded-full text-white hover:bg-white/20 hover:scale-105 transition-all font-semibold flex items-center">
             <Trophy className="w-5 h-5 mr-2" /> Problem Statements
           </button>
         </div>

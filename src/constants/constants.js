@@ -1,5 +1,6 @@
 import { Users, Monitor, Trophy, Rocket } from 'lucide-react';
 
+import { Mail, Phone, MapPin, Globe, Youtube, Instagram, Twitter } from 'lucide-react';
 
 
 
@@ -16,6 +17,82 @@ export const navItems = [
     { name: 'Contact Us', href: '/contact-us' },
 ];
 
+
+export const faqData = [
+    {
+        question: "Can teams be cross-departmental?",
+        answer: "Yes, interdisciplinary collaboration is encouraged."
+    },
+    {
+        question: "Will we get any certificate of participation?",
+        answer: "Yes, all finalists will receive certificates. College-level participants may also receive digital certificates."
+    },
+    {
+        question: "Are pre-developed projects allowed?",
+        answer: "No. All ideas and prototypes must be developed during the hackathon window."
+    },
+    {
+        question: "Is there any registration fee?",
+        answer: "No. The hackathon is free for all eligible BPUT students."
+    },
+    {
+        question: "Can we participate virtually in the final round?",
+        answer: "No. The grand finale is an in-person event at BPUT campus."
+    }
+];
+
+
+export const contactInfo = [
+    {
+        icon: Mail,
+        label: 'Email',
+        value: 'hackathon@bput.ac.in',
+        subtext: '24h response time',
+        gradient: 'from-blue-500 to-cyan-500'
+    },
+    {
+        icon: Phone,
+        label: 'Phone',
+        value: '+91 12345 67890',
+        subtext: 'Business hours',
+        gradient: 'from-green-500 to-teal-500'
+    },
+    {
+        icon: MapPin,
+        label: 'Location',
+        value: 'BPUT, Chhend',
+        subtext: 'Rourkela, Odisha',
+        gradient: 'from-purple-500 to-pink-500'
+    },
+    {
+        icon: Globe,
+        label: 'Website',
+        value: 'bput.ac.in',
+        subtext: 'Official portal',
+        gradient: 'from-orange-500 to-red-500'
+    }
+];
+
+export const socialLinks = [
+    {
+        icon: Youtube,
+        url: 'https://youtube.com/@bput-hackathon',
+        name: 'YouTube',
+        gradient: 'from-red-500 to-red-600'
+    },
+    {
+        icon: Instagram,
+        url: 'https://instagram.com/bput_hackathon',
+        name: 'Instagram',
+        gradient: 'from-pink-500 to-purple-600'
+    },
+    {
+        icon: Twitter,
+        url: 'https://twitter.com/bput_hackathon',
+        name: 'Twitter',
+        gradient: 'from-blue-400 to-blue-600'
+    }
+];
 
 export const scheduleData = [
     {

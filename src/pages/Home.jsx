@@ -6,6 +6,7 @@ import Schedule from "../sections/home/Schedule"
 import Prizes from "../sections/home/Prizes"
 import FAQ from "../sections/home/FAQ"
 import Contact from "../sections/home/Contact"
+import Announcements from "../sections/home/Announcements"
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
         <>
 
             <HeroSection />
+            <Announcements />
             <About />
             <ProblemSectors />
             <Partners />

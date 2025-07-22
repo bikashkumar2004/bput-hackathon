@@ -42,7 +42,9 @@ const Header = () => {
                 className="w-10 h-11"
               />
             </div>
-            <div className={`font-roboto-slab uppercase font-bold text-xl transition-all ${isScrolled ? 'bg-clip-text text-transparent bg-gradient-to-r from-white to-pink-500' : 'text-white'
+            <div className={`font-roboto-slab uppercase font-bold text-xl transition-all ${isScrolled
+                ? 'bg-clip-text text-transparent bg-gradient-to-r from-white to-pink-500'
+                : 'text-white'
               }`}>
               Hackathon 2025
             </div>
@@ -51,21 +53,28 @@ const Header = () => {
           {/* Desktop Navigation & Register Button */}
           <div className="hidden md:flex items-center gap-6">
             <div className="flex items-center space-x-8">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`flex items-center space-x-1 font-semibold text-sm transition-all duration-200 ${isScrolled ? 'text-white hover:text-yellow-300' : 'text-white hover:text-indigo-200'
-                    }`}
-                >
-                  <span>{item.name}</span>
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                const isActive = pathname === item.href;
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`flex items-center space-x-1 font-semibold text-sm transition-all duration-200 ${isActive
+                        ? 'text-yellow-300'
+                        : isScrolled
+                          ? 'text-white hover:text-yellow-300'
+                          : 'text-white hover:text-indigo-200'
+                      }`}
+                  >
+                    <span>{item.name}</span>
+                  </Link>
+                );
+              })}
             </div>
             <button
               className={`cursor-pointer font-bold py-2 px-6 rounded-full text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg ${isScrolled
-                ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
-                : 'bg-white/10 text-white border border-white/20 backdrop-blur'
+                  ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
+                  : 'bg-white/10 text-white border border-white/20 backdrop-blur'
                 }`}
             >
               Register Now
@@ -84,24 +93,26 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full z-40 bg-gradient-to-br from-indigo-900 to-pink-900 text-white shadow-lg transition-all duration-300">
             <div className="flex flex-col space-y-4 p-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center space-x-2 font-medium hover:text-yellow-300 transition duration-200"
-                >
-
-                  <span>{item.name}</span>
-                </Link>
-              ))}
+              {navItems.map((item) => {
+                const isActive = pathname === item.href;
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`flex items-center space-x-2 font-medium transition duration-200 ${isActive ? 'text-yellow-300' : 'hover:text-yellow-300'
+                      }`}
+                  >
+                    <span>{item.name}</span>
+                  </Link>
+                );
+              })}
               <button className="bg-white text-indigo-900 font-bold py-2 px-4 rounded-full text-sm hover:bg-yellow-300 transition-all duration-300 hover:scale-105 hover:shadow-lg mt-2">
                 Register Now
               </button>
             </div>
           </div>
         )}
-
       </div>
     </nav>
   );

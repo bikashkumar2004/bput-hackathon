@@ -1,17 +1,17 @@
 import React from "react";
-import { Gift, Briefcase, Users } from "lucide-react";
+import { Gift, Briefcase, Users, Trophy } from "lucide-react";
 import Heading from "../../components/typography/Heading";
 
 const benefits = [
   {
     icon: <Users size={40} />,
-    title: 'Networking',
-    description: 'Connect with industry professionals and like-minded developers',
+    title: 'Special Rewards',
+    description: 'Best Woman-Led Team, Green Technology Award and Jury\'s Choice',
   },
   {
     icon: <Gift size={40} />,
     title: 'Swag & Goodies',
-    description: 'Exclusive t-shirts, stickers, and tech accessories',
+    description: 'Participation Ceritificate, Exclusive t-shirts, stickers, and digital Badges',
   },
   {
     icon: <Briefcase size={40} />,
@@ -72,8 +72,8 @@ const Prizes = () => {
               <div className="text-6xl md:text-[90px] font-bold bg-gradient-to-r from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-2">
                 ₹ 50,000
               </div>
-              <div className="text-lg font-semibold text-gray-600 uppercase tracking-wider">
-                FIRST PRIZE
+              <div className="text-lg font-semibold text-gray-600 uppercase tracking-wider flex items-center gap-3">
+                <Trophy /> FIRST PRIZE
               </div>
             </div>
 
@@ -82,8 +82,8 @@ const Prizes = () => {
               <div className="text-6xl md:text-[90px] font-bold bg-gradient-to-r from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-2">
                 ₹ 30,000
               </div>
-              <div className="text-lg font-semibold text-gray-600 uppercase tracking-wider">
-                SECOND PRIZE
+              <div className="text-lg font-semibold text-gray-600 uppercase tracking-wider flex items-center gap-3">
+                <Trophy /> SECOND PRIZE
               </div>
             </div>
 
@@ -92,8 +92,8 @@ const Prizes = () => {
               <div className="text-6xl md:text-[90px] font-bold bg-gradient-to-r from-primary via-primary to-purple-500 text-transparent bg-clip-text mb-2">
                 ₹ 20,000
               </div>
-              <div className="text-lg font-semibold text-gray-600 uppercase tracking-wider">
-                THIRD PRIZE
+              <div className="text-lg font-semibold text-gray-600 uppercase tracking-wider flex items-center gap-3">
+                <Trophy /> THIRD PRIZE
               </div>
             </div>
           </div>

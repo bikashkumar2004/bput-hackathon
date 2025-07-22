@@ -32,18 +32,18 @@ const formatDateRange = (startDate, endDate) => {
   return `${formatDate(start)} - ${formatDate(end)}`;
 };
 
-const getStatusColor = (status) => {
-  switch (status) {
-    case 'upcoming':
-      return 'bg-blue-100 text-blue-800';
-    case 'ongoing':
-      return 'bg-green-100 text-green-800';
-    case 'completed':
-      return 'bg-gray-100 text-gray-600';
-    default:
-      return 'bg-gray-100 text-gray-600';
-  }
-};
+// const getStatusColor = (status) => {
+//   switch (status) {
+//     case 'upcoming':
+//       return 'bg-blue-100 text-blue-800';
+//     case 'ongoing':
+//       return 'bg-green-100 text-green-800';
+//     case 'completed':
+//       return 'bg-gray-100 text-gray-600';
+//     default:
+//       return 'bg-gray-100 text-gray-600';
+//   }
+// };
 
 const Schedule = () => {
   return (
@@ -78,11 +78,16 @@ const Schedule = () => {
             A comprehensive multi-phase competition designed to identify and nurture the best innovative solutions
           </p>
 
-          <div className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-50 to-pink-50 px-6 py-3 rounded-xl border border-purple-200 mt-6">
-            <Calendar className="text-purple-600" size={20} />
-            <span className="font-semibold text-gray-800">7th November 2025</span>
-            <Building className="text-purple-600" size={20} />
-            <span className="font-semibold text-gray-800">BPUT, Rourkela</span>
+          <div className="w-fit mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-10 bg-gradient-to-r from-purple-50 to-pink-50 px-6 py-3 rounded-xl border border-purple-200 mt-6">
+            <p className='flex items-center gap-3'>
+
+              <Calendar className="text-purple-600" size={20} />
+              <span className="font-semibold text-gray-800">7th November 2025</span>
+            </p>
+            <p className='flex items-center gap-3'>
+              <Building className="text-purple-600" size={20} />
+              <span className="font-semibold text-gray-800">BPUT,Chhend, Rourkela</span>
+            </p>
           </div>
         </div>
 
@@ -95,14 +100,14 @@ const Schedule = () => {
               {scheduleData.map((item, index) => (
                 <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                   {/* Timeline Node */}
-                  <div className="absolute left-8 md:left-1/2 md:transform md:-translate-x-1/2 z-20">
+                  <div className="absolute left-1 md:left-1/2 md:transform md:-translate-x-1/2 z-20">
                     <div className={`w-16 h-16 bg-gradient-to-r ${getPhaseStatus(item.startDate, item.endDate) === 'completed' ? 'from-gray-400 to-gray-500' : item.color} rounded-full flex items-center justify-center shadow-lg border-4 border-white group hover:scale-110 transition-transform duration-300`}>
                       <item.icon className="text-white" size={24} />
                     </div>
                   </div>
 
                   {/* Content Card */}
-                  <div className={`w-full md:w-5/12 ml-24 md:ml-0 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
+                  <div className={`w-full md:w-5/12 ml-14 md:ml-0 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
                     <div className={`relative group ${getPhaseStatus(item.startDate, item.endDate) === 'completed' ? 'opacity-60' : ''}`}>
                       {/* Glowing border effect */}
                       <div className={`absolute inset-0 bg-gradient-to-r ${getPhaseStatus(item.startDate, item.endDate) === 'completed' ? 'from-gray-300 to-gray-400' : item.color} rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity`}></div>

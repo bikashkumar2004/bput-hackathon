@@ -95,10 +95,10 @@ const HeroSection = () => {
 
           {/* College Info */}
           <div className="text-center mt-4 w-full flex items-center justify-center">
-            <h3 className="text-xl font-extrabold font-roboto-mono bg-white w-fit text-primary uppercase px-2">7th November 2025, Biju Patnaik University of Technology, Rourkela, Odisha</h3>
+            <h3 className="text-xl font-extrabold font-roboto-mono bg-white w-fit text-primary uppercase px-2">7th November 2025,<br className="block md:hidden" /> Biju Patnaik University of Technology, Rourkela, Odisha</h3>
           </div>
 
-          <p className="text-base md:text-lg text-indigo-100 mt-4 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-indigo-100 mt-4 max-w-3xl mx-auto md:leading-relaxed">
             Join the ultimate coding marathon where brilliant minds come together to build the future. Code, create, and compete for amazing prizes!
           </p>
         </section>
@@ -116,7 +116,7 @@ const HeroSection = () => {
               { label: "Minutes", value: timeLeft.minutes },
               { label: "Seconds", value: timeLeft.seconds },
             ].map((item, index) => (
-              <Tilt key={index} glareEnable glareMaxOpacity={0.2} className="bg-white/10 backdrop-blur-md p-4 w-24 rounded-xl">
+              <Tilt key={index} glareEnable glareMaxOpacity={0.2} className="bg-white/10 backdrop-blur-md p-2 md:p-4 md:w-24 rounded-xl">
                 <div className="text-3xl font-bold text-white mb-1">
                   <FlipNumberAnimation value={item.value} />
                 </div>
@@ -130,14 +130,14 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <button className="relative group text-white py-3 px-6 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 shadow-lg hover:scale-105 transition-transform">
+          <button className="relative group text-white py-3 px-6 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 shadow-lg hover:scale-105 transition-transform w-fit">
             <span className="flex items-center font-semibold">
               <Users className="w-5 h-5 mr-2" /> Register Now
             </span>
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 blur opacity-70 group-hover:opacity-100 transition-opacity duration-300 z-[-1]" />
           </button>
 
-          <button onClick={() => navigate("/problem-statements")} className="bg-white/10 cursor-pointer backdrop-blur-lg border border-white/20 py-3 px-6 rounded-full text-white hover:bg-white/20 hover:scale-105 transition-all font-semibold flex items-center">
+          <button onClick={() => navigate("/problem-statements")} className="bg-white/10 cursor-pointer backdrop-blur-lg border border-white/20 py-3 px-6 rounded-full text-white hover:bg-white/20 hover:scale-105 transition-all font-semibold flex items-center w-fit">
             <Trophy className="w-5 h-5 mr-2" /> Problem Statements
           </button>
         </div>

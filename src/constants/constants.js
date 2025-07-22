@@ -1,6 +1,6 @@
-import { Users, Monitor, Trophy, Rocket } from 'lucide-react';
+import { Users, Monitor, Trophy, Rocket, Linkedin } from 'lucide-react';
 
-import { Mail, Phone, MapPin, Globe, Youtube, Instagram, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe, Youtube, Instagram } from 'lucide-react';
 
 
 
@@ -76,20 +76,20 @@ export const contactInfo = [
 export const socialLinks = [
     {
         icon: Youtube,
-        url: 'https://youtube.com/@bput-hackathon',
+        url: 'https://www.youtube.com/bputodisha',
         name: 'YouTube',
         gradient: 'from-red-500 to-red-600'
     },
     {
         icon: Instagram,
-        url: 'https://instagram.com/bput_hackathon',
+        url: '#',
         name: 'Instagram',
         gradient: 'from-pink-500 to-purple-600'
     },
     {
-        icon: Twitter,
-        url: 'https://twitter.com/bput_hackathon',
-        name: 'Twitter',
+        icon: Linkedin,
+        url: 'https://www.linkedin.com/school/biju-patnaik-university-of-technology-odisha/',
+        name: 'LinkedIn',
         gradient: 'from-blue-400 to-blue-600'
     }
 ];

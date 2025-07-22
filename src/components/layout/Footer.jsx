@@ -1,11 +1,11 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Github, Twitter, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Twitter, Linkedin, Youtube, Instagram, LucideWebhook, Globe } from 'lucide-react';
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
           <div>
             <div className="text-2xl font-bold mb-4">
               BPUT Hackathon <span className="text-primary">2025</span>
@@ -14,14 +14,14 @@ const Footer = () => {
               Empowering innovation through collaborative problem-solving and cutting-edge technology.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Github size={20} />
+              <a href="https://www.youtube.com/bputodisha" className="text-gray-400 hover:text-primary transition-colors">
+                <Youtube size={20} />
               </a>
               <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Twitter size={20} />
+                <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Linkedin size={20} />
+              <a href="https://bput.ac.in" className="text-gray-400 hover:text-primary transition-colors">
+                <Globe size={20} />
               </a>
             </div>
           </div>
@@ -54,7 +54,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
             <p className="text-gray-400 mb-4">Stay updated with the latest hackathon news</p>
             <div className="flex">
@@ -67,7 +67,7 @@ const Footer = () => {
                 Subscribe
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
